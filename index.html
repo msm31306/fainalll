@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maui Dynamic CH Demo</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌋 Lahaina Evacuation Routing: Dijkstra vs. Dynamic CH</h1>
+            <p class="subtitle">August 8, 2023 • Real-time simulation</p>
+        </header>
+
+        <div class="controls">
+            <button id="setFireBtn">🔥 Simulate Fire (Close 5 Roads)</button>
+            <button id="resetBtn">Reset Map</button>
+            <span class="status" id="status">Click map to set start & end points</span>
+        </div>
+
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div class="results">
+            <div class="algorithm-box dijkstra">
+                <h2>🐌 Naive Dijkstra</h2>
+                <div class="metric">Query Time: <span id="dijkstraTime">--</span> ms</div>
+                <div class="metric">Nodes Explored: <span id="dijkstraNodes">--</span></div>
+                <div class="metric">Status: <span id="dijkstraStatus">--</span></div>
+                <div class="progress-bar">
+                    <div id="dijkstraProgress"></div>
+                </div>
+            </div>
+
+            <div class="algorithm-box ch">
+                <h2>⚡ Dynamic CH</h2>
+                <div class="metric">Query Time: <span id="chTime">--</span> ms</div>
+                <div class="metric">Nodes Explored: <span id="chNodes">--</span></div>
+                <div class="metric">Status: <span id="chStatus">--</span></div>
+                <div class="progress-bar">
+                    <div id="chProgress"></div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>📊 Data: Simulated Lahaina road network (15 intersections) | <a href="https://github.com/yourusername/CH-Maui-Demo" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

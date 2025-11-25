@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    color: #FF3C3C;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #00D4FF;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#setFireBtn {
+    background: #FF3C3C;
+    color: white;
+}
+
+#setFireBtn:hover {
+    background: #cc0000;
+}
+
+#resetBtn {
+    background: #2A2A2A;
+    color: white;
+}
+
+#resetBtn:hover {
+    background: #555;
+}
+
+.status {
+    color: #00FF88;
+    font-size: 14px;
+    align-self: center;
+}
+
+.map-container {
+    height: 400px;
+    margin-bottom: 20px;
+    border: 2px solid #2A2A2A;
+    border-radius: 8px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.algorithm-box {
+    background: #2A2A2A;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.dijkstra {
+    border-left-color: #FF3C3C;
+}
+
+.ch {
+    border-left-color: #00FF88;
+}
+
+.algorithm-box h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.metric {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.metric span {
+    font-weight: bold;
+    color: #00D4FF;
+}
+
+.progress-bar {
+    height: 6px;
+    background: #000;
+    border-radius: 3px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar div {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+#dijkstraProgress {
+    background: #FF3C3C;
+}
+
+#chProgress {
+    background: #00FF88;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    color: #555;
+}
+
+footer a {
+    color: #00D4FF;
+}
